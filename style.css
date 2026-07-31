@@ -132,7 +132,7 @@ h1, h2, h3, h4 {
 
 .nav-links {
   display: flex;
-  gap: 32px;
+  gap: 28px;
   list-style: none;
 }
 
@@ -157,11 +157,35 @@ h1, h2, h3, h4 {
   font-size: 0.9rem;
   text-decoration: none;
   transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
 }
 
 .nav-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+}
+
+.nav-btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-main);
+  padding: 7px 14px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.nav-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--primary-teal);
+  color: var(--primary-teal);
+  transform: translateY(-2px);
 }
 
 /* Hero Section */
@@ -216,7 +240,7 @@ h1, h2, h3, h4 {
 }
 
 .hero-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   color: var(--text-muted);
   margin-bottom: 32px;
   max-width: 580px;
@@ -224,14 +248,14 @@ h1, h2, h3, h4 {
 
 .hero-actions {
   display: flex;
-  gap: 16px;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
 .btn-primary {
   background: linear-gradient(135deg, var(--primary-emerald) 0%, var(--accent-cyan) 100%);
   color: #050b14;
-  padding: 14px 28px;
+  padding: 14px 26px;
   border-radius: var(--radius-md);
   font-weight: 700;
   text-decoration: none;
@@ -251,7 +275,7 @@ h1, h2, h3, h4 {
 .btn-secondary {
   background: rgba(255, 255, 255, 0.05);
   color: var(--text-main);
-  padding: 14px 28px;
+  padding: 14px 24px;
   border-radius: var(--radius-md);
   font-weight: 600;
   text-decoration: none;
@@ -259,6 +283,7 @@ h1, h2, h3, h4 {
   align-items: center;
   gap: 10px;
   border: 1px solid var(--border-color);
+  cursor: pointer;
   transition: var(--transition);
 }
 
@@ -413,6 +438,23 @@ h1, h2, h3, h4 {
   color: #fff;
 }
 
+/* Ticket Cards */
+.ticket-card {
+  text-align: left;
+}
+
+.ticket-icon {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.ticket-org {
+  color: var(--primary-emerald);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
 /* Timeline / Experience */
 .timeline {
   position: relative;
@@ -523,14 +565,14 @@ h1, h2, h3, h4 {
   border-radius: var(--radius-lg);
   padding: 50px;
   text-align: center;
-  max-width: 800px;
+  max-width: 850px;
   margin: 0 auto;
 }
 
 .contact-info {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 16px;
   flex-wrap: wrap;
   margin: 30px 0;
 }
@@ -538,9 +580,9 @@ h1, h2, h3, h4 {
 .contact-item {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   background: var(--bg-card);
-  padding: 12px 24px;
+  padding: 12px 22px;
   border-radius: var(--radius-full);
   border: 1px solid var(--border-color);
   color: var(--text-main);
@@ -553,6 +595,17 @@ h1, h2, h3, h4 {
 .contact-item:hover {
   border-color: var(--primary-teal);
   transform: translateY(-2px);
+}
+
+.contact-item.highlight-contact {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: var(--primary-emerald);
+  color: var(--primary-teal);
+}
+
+.contact-item.highlight-contact:hover {
+  background: rgba(16, 185, 129, 0.25);
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
 }
 
 /* Toast notification */
